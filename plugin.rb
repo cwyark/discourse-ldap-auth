@@ -40,7 +40,7 @@ class LDAPAuthenticator < ::Auth::Authenticator
           bind_dn: SiteSetting.ldap_bind_dn.presence || SiteSetting.try(:ldap_bind_db),
           password: SiteSetting.ldap_password,
           filter: SiteSetting.ldap_filter,
-          callback_path: "/csp/auth/ldap/callback"
+          callback_path: "/threads/auth/ldap/callback"
         )
       }
   end
